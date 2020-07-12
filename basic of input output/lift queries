@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+	int num,a=0,b=7;
+	scanf("%d", &num);
+	for(int i=0;i<num;i++)
+	{
+		int n;
+		scanf("%d",&n);
+		if((n-a)<(b-n))
+		{
+			a=n;
+			printf("A\n");
+		}
+		else if((n-a)>(b-n))
+		{
+			b=n;
+			printf("B\n");
+		}
+		else 
+		{
+			if(a<b)
+				{	
+					a=n;
+					printf("A\n");
+				}
+			else
+				{
+					b=n;
+					printf("B\n");
+				}
+		}
+
+	}
+	return 0;
+}
