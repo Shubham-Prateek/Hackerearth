@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+	long long int i,t,z;
+	scanf("%lld", &z);
+	for(i=0;i<z;i++)
+	{
+		int n;
+		t=0;
+		scanf("%d",&n);
+		char s[n];
+		scanf("%s",s);
+		for(int j=0;j<n;j++)
+		{
+			if(s[j]!='a'&&s[j]!='e'&&s[j]!='i'&&s[j]!='o'&&s[j]!='u')
+			{
+				if(s[j+1]=='a'||s[j+1]=='e'||s[j+1]=='i'||s[j+1]=='o'||s[j+1]=='u')
+				{
+					t=t+1;
+				}
+			}
+		}
+		printf("%d\n",t);
+	}
+	return 0;
+}
