@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main()
+{
+	int num;
+	scanf("%d", &num);
+	for(int i=0;i<num;i++)
+	{
+		int SH,SM,EH,EM,FH,FM;
+		scanf("%d %d %d %d",&SH,&SM,&EH,&EM);
+		if(SM>EM)
+		{
+			if(SH<=EH)
+			{
+				FM=((60-SM)+EM);
+				FH=EH-SH-1;
+				printf("%d %d\n",FH,FM);
+			}
+			else
+			{
+				FM=((60-SM)+EM);
+				FH=(24-EH)+SH-1;
+				printf("%d %d\n",FH,FM);
+			}
+		}
+		else if(SM<EM)
+		{
+			if(SH<=EH)
+			{
+				FM=EM-SM;
+				FH=EH-SH;
+				printf("%d %d\n",FH,FM);
+			}
+			else
+			{
+				FM=((60-SM)+EM);
+				FH=(24-EH)+SH;
+				printf("%d %d\n",FH,FM);
+			}
+		}
+		else
+		{
+			if(SH<=EH)
+			{
+				//FM=EM-SM;
+				FH=EH-SH;
+				printf("%d 0\n",FH,FM);
+			}
+			else
+			{
+				//FM=((60-SM)+EM);
+				FH=(24-EH)+SH;
+				printf("%d 0\n",FH,FM);
+			}
+		}
+	}
+	return 0;
+}
