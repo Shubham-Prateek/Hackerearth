@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+	long long int x,d,r,t=0,m=0,t1=0;
+	float pie=22/7,c=0;
+	scanf("%lld ", &d);
+	for(int i=0;i<d;i++)
+	{
+		scanf("%d %d",&r,&x);
+		c=(22*r*2)/7;
+		m=100*x;
+		if(m>=c)
+		{
+			t1++;
+		}
+		
+	}
+	printf("%lld",t1);
+	return 0;
+}

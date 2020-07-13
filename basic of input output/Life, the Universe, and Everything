@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+	int l;
+	while(l!=42)
+	{
+		scanf("%d",&l);
+		if(l!=42)
+		printf("%d\n",l);
+	}
+}

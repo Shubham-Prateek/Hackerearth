@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+	int num;
+	scanf("%d", &num);
+	int k=num/3;
+	if(3*k==num)	
+		printf("YES");
+	else 
+		printf("NO");
+	return 0;
+}
