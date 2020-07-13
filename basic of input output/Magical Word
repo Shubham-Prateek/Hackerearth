@@ -1,0 +1,61 @@
+#include <stdio.h>
+int prime(int x)
+{
+	for(int i=0;i<x/2;i++)
+	{
+
+	}
+}
+
+int main()
+{
+	int num;
+	scanf("%d", &num);
+	for(int j=0;j<num;j++)
+	{
+		int n;
+		scanf("%d",&n);
+		char s[500];
+		scanf("%s",s);
+		for(int i=0;i<strlen(s);i++)
+		{
+			if(s[i]>=0&&s[i]<70)
+			s[i]=67;
+			else if(s[i]>69&&s[i]<73)
+			s[i]=71;
+			else if(s[i]>72&&s[i]<77)
+			s[i]=73;
+			else if(s[i]>76&&s[i]<82)
+			s[i]=79;
+			else if(s[i]>81&&s[i]<87)
+			s[i]=83;
+			else if(s[i]>85&&s[i]<91)
+			s[i]=89;
+			else if(s[i]>96&&s[i]<100)
+			s[i]=97;
+			else if(s[i]>99&&s[i]<103)
+			s[i]=101;
+			else if(s[i]>102&&s[i]<106)
+			s[i]=103;
+			else if(s[i]>105&&s[i]<109)
+			s[i]=107;
+			else if(s[i]>108&&s[i]<112)
+			s[i]=109;
+			else if(s[i]>111)
+			s[i]=113;
+			else if(s[i]>90&&s[i]<94)
+			s[i]=89;
+			else if(s[i]>0&&s[i]<65)
+			s[i]=67;
+			else if(s[i]>93&&s[i]<97)
+			s[i]=97;
+			else if(s[i]>122)
+			s[i]=113;
+			
+
+		}
+		printf("%s\n",s);
+
+	}
+	return 0;
+}
