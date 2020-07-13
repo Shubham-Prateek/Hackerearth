@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+	char s[100];
+	long long int p=0;
+	scanf("%s", s);
+	for(int i=0;i<strlen(s);i++)
+	{
+		p=p+(s[i]-96);
+	}
+	printf("%lld",p);
+	return 0;
+}
