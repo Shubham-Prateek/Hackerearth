@@ -1,0 +1,86 @@
+#include <stdio.h>
+
+int main()
+{
+	int b,g,count=0;
+	scanf("%d", &b);
+	int x[b];
+	for(int i=0;i<b;i++)
+		scanf("%d",&x[i]);
+	scanf("%d", &g);
+	int y[g];
+	for(int i=0;i<g;i++)
+		scanf("%d",&y[i]);
+	
+	for(int i=0;i<b;i++)
+	{
+		for(int j=0;j<b;j++)
+		{
+			if(x[i]>x[j])
+			{
+				int t=x[j];
+				x[j]=x[i];
+				x[i]=t;
+			}
+		}
+	}
+	for(int i=0;i<g;i++)
+	{
+		for(int j=0;j<g;j++)
+		{
+			if(y[i]>y[j])
+			{
+				int t=y[j];
+				y[j]=y[i];
+				y[i]=t;
+			}
+		}
+	}
+//	for(int i=0;i<b;i++)
+	//{
+		//printf("%d ",x[i]);
+	//}
+//	printf("\n");
+	//for(int i=0;i<g;i++)
+	//{
+		//printf("%d ",y[i]);
+	//}
+
+	for(int i=0;i<b;i++)
+	{
+		for(int j=0;j<g;j++)
+		{
+			if(((y[j]-x[i])==1)||((x[i]==y[j]))||((x[i]-y[j])==1)&&x[i]!=0&&y[i]!=0)
+			{
+				count++;
+				//printf("\n..x[%d]=%d",i,x[i]);
+				//printf("\n..y[%d]=%d",j,y[j]);
+				//printf("\n.%d.",count);
+				//x[i]=-50;
+				y[j]=-10;
+				break;
+			}
+		/*	else if
+			{
+					count++;
+				//	printf("\n..x[%d]=%d",i,x[i]);
+				//printf("\n..y[%d]=%d",j,y[j]);
+				//printf("\n.%d.",count);
+				//x[i]=-50;
+				y[j]=-10;
+				break;
+			}
+			else if
+			{
+					count++;
+				//	printf("\n..x[%d]=%d",i,x[i]);
+				//printf("\n..y[%d]=%d",j,y[j]);
+				//printf("\n.%d.",count);
+				//x[i]=-50;
+				y[j]=-10;
+				break;
+			}*/
+		}
+	}
+	printf("\n\n%d",count);
+}
