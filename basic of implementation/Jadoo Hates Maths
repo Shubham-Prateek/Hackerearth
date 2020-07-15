@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+	int num,next=0;
+	scanf("%d", &num);
+	next=num+1;
+	while(((next)%3==0)||(next%10==3)||((next/10)%10==3))
+	{
+		next++;
+		//num++;
+	}
+	printf("%d",next);
+}
