@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+	char s[100000];
+	scanf("%s",s);
+	int l=0,m,count=0;
+	int p=strlen(s);
+	for(int i=0;i<p;i++)
+	{
+	//	if(s[i]!='0')
+		{
+			for(int j=i+1;j<p;j++)
+			{
+				if(s[i]==s[j])
+				{
+					s[j]=s[p-1];
+					count++;
+					p--;
+					j--;
+
+				}
+			}
+		}
+	}
+	printf("%d",count);
+}
