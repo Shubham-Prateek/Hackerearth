@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+	long long int n,m;
+	scanf("%lld %lld", &n,&m);
+	long long int p=1;
+	long long int q=n-m+1;
+	long long int t=1;
+	if(n==m)
+	{
+		while(p<m)
+		{
+				t=(t*(p+1))%1000000007;
+				p++;
+		//	printf("%lld\n",t);
+		}
+		long long int z=(t*q)%1000000007;
+		printf("%lld",z);
+	}
+	else
+	{
+		do
+		{
+				n=t;
+				t=(t*(p+1))%1000000007;
+				p++;
+		//	printf("..%lld\n",t);
+		}while(p<m);
+		//t=t/(p+1);
+			printf("%lld\n",t);
+		long long int z=(t*q)%1000000007;
+	//	printf("%lld",z);
+	}
+	
+}
