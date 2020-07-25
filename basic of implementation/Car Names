@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(){
+	int num;
+	scanf("%d", &num);
+	for(int i=0;i<num;i++)
+	{
+		char a[500];
+		scanf("%s",a);
+		int s=0,x=0;
+		while(a[s]==a[s+1])
+		{
+			x++;
+			s++;
+		}
+		x++;
+		int y=0;
+		s=y+x;
+		while(a[s]==a[s+1])
+		{
+			y++;
+			s++;
+		}
+		y++;
+		s=x+y;
+		int z=0;
+		while(a[s]==a[s+1])
+		{
+			z++;
+			s++;
+		}
+		z++;
+		if(x==y&&y==z)
+		{
+			if(strlen(a)==(x+y+z)&&(a[0]!=a[x]&&a[x]!=a[2*x]&&a[0]!=a[2*x]))
+			printf("OK\n");
+			else
+				printf("Not OK\n");
+		}
+		else
+			printf("Not OK\n");
+		
+	}
+}
