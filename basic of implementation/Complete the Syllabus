@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+int main()
+{
+	int num;
+	scanf("%d", &num);
+	for(int i=0;i<num;i++)
+	{
+		long long int n,a[7],b=0,j;
+		scanf("%lld",&n);
+		for( j=0;j<7;j++)
+		{
+			scanf("%lld",&a[j]);
+		}
+		long long int c=a[0]+a[1]+a[2]+a[3]+a[4]+a[5]+a[6];             // for TLE    from line 15 to line 26
+		if(c<n)                                                         //
+		{
+			if(n%c==0)
+			{
+				n=n%c+c;
+			}
+			else
+			{
+				n=(n%c);
+			}
+		}                                                               // upto here, tle condion satisfy
+			
+		for( j=0;j<7;j++)
+		{
+			b=b+a[j];
+			{
+				if(b>=n)
+				break;
+			}
+			if(b<n&&j==6)
+			{
+				j=-1;
+			}
+		}
+			if(j==6)//&&a[j]==1)
+			{	
+				printf("SUNDAY\n");
+				//break;
+			}
+			else if(j==5)//&&a[j]==1)
+			{
+				printf("SATURDAY\n");
+				//break;
+			}
+			else if(j==4)//&&a[j]==1)
+			{
+				printf("FRIDAY\n");
+				//break;
+			}
+			else if(j==3)//&&a[j]==1)
+			{
+				printf("THURSDAY\n");
+				//break;
+			}
+			else if(j==2)//&&a[j]==1)
+			{
+				printf("WEDNESDAY\n");
+				//break;
+			}
+			else if(j==1)//&&a[j]==1)
+			{
+				printf("TUESDAY\n");
+				//break;
+			}
+			else if(j==0)//&&a[j]==1)
+			{
+				printf("MONDAY\n");
+				//break;
+			}
+	}
+}
+
