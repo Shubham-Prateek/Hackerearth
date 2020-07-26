@@ -1,0 +1,97 @@
+#include <stdio.h>
+
+int main()
+{
+	char s[1000];
+	int z=0;
+	scanf("%s",s);
+	for(int i=0;i<strlen(s);i++)
+	{
+		if((s[i]=='='))
+		{
+			i++;
+			printf("username: ");
+			while(s[i]!='&'&&s[i+1]!='p')
+			{
+				printf("%c",s[i]);
+				i++;
+				z=i;
+			}
+			printf("\n");
+			break;
+		}
+	}	
+
+	for(int i=z;i<strlen(s);i++)
+	{
+		if(s[i]=='=')
+		{
+			//printf("\n..x..\n");
+			int j=i+1;
+			printf("pwd: ");
+			while(j<strlen(s))
+			{
+				printf("%c",s[j]);
+				j++;
+				z=j;
+				if(s[j]=='&'&&s[j+1]=='p')
+					break;
+			}
+			printf("\n");
+			break;
+		}
+		
+	}	
+
+	for(int i=z;i<strlen(s);i++)
+	{
+		if(s[i-1]=='=')
+		{
+			printf("profile: ");
+			while(i<strlen(s))
+			{
+				printf("%c",s[i]);
+				i++;
+				z=i;
+				if(s[i]=='&'&&s[i+1]=='r')
+				break;
+			}
+			printf("\n");
+			break;
+		}
+	}
+
+	for(int i=z+1;i<strlen(s);i++)
+	{
+		if(s[i-1]=='=')
+		{
+			//i++;
+			printf("role: ");
+			while(s[i]!='&')//&&s[i+1]!='o')
+			{
+				printf("%c",s[i]);
+				i++;
+				z=i;
+			}
+			printf("\n");
+			break;
+		}
+	}	
+
+	for(int i=z;i<=strlen(s);i++)
+	{
+		if(s[i]=='=')
+		{
+			i++;
+			printf("key: ");
+			while(i!=strlen(s))
+			{
+				printf("%c",s[i]);
+				i++;
+				z=i;
+			}
+			printf("\n");
+			break;
+		}
+	}	
+}
