@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main()
+{
+	int num;
+	long long int k;
+	scanf("%d", &num);
+	int a[num],b[num],c=0,d=0;
+	for(long long int i=0;i<num;i++)
+		{
+			scanf("%lld",&a[i]);
+			if(i>0)
+			if(a[i]>a[i-1])
+			{
+				 k=a[i]-a[i-1];
+			}
+			else
+				 k=a[i-1]-a[i];
+			if(k>c)
+			c=k;
+		}
+	for(long long int i=0;i<num;i++)
+		{
+			scanf("%lld",&b[i]);
+			if(i>0)
+			if(b[i]>b[i-1])
+			{		if(b[i]-b[i-1]>k)
+				 k=b[i]-b[i-1];
+			}
+			else
+				 k=b[i-1]-b[i];
+			if(k>c)
+			d=k;
+		}
+		if(c>d)
+		{
+			printf("Dom\n");
+			printf("%d",c);
+		}
+		else
+		{
+			printf("Brian\n");
+			printf("%d",d);
+		}
+
+}
