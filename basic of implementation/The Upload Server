@@ -1,0 +1,220 @@
+#include<stdio.h>
+int main()
+{
+	int num,i=0,j=0,z;
+	scanf("%d",&num);
+	while(i<=num)
+	{
+		char s[1000000];
+		int a=0,b=0,c=0,k=0,x=0,y=0,z=0;
+		gets(s);
+		if(i>0)
+		{
+			for(int j=0;j<strlen(s);j++)
+			{
+				while(s[j]!=32)
+				{
+					if((s[j]>=65&&s[j]<=90)||(s[j]>=97&&s[j]<=122))
+					{
+						a=1;
+					}
+					j++;
+				}
+				if(s[j]==32)
+				{
+					z=j;
+					break;
+				}
+			}
+			if(s[0]==48)
+			{
+				printf("N\n");
+				//break;
+			}
+			else if(a==0)
+			{
+				int k=z+1;
+				for(int j=z+1;j<strlen(s);j++)
+				{
+					while(s[j]!=32)
+					{
+						if((s[j]>=65&&s[j]<=90)||(s[j]>=97&&s[j]<=122))
+						{
+							b=1;
+						}
+						j++;
+						//printf("<<%d<<\n",j);
+						if(s[j]==32||s[j]==10||s[j]==0)
+						{
+							z=j;
+							break;
+						}
+					}
+					break;
+				}
+				if(s[k]==48)
+				{
+					printf("N\n");
+					//break;
+				}
+				else if(b==0)
+				{
+					if(z==strlen(s))
+					{
+						printf("N\n");
+					}
+					else
+					{
+						//printf("<<<&d<<\n",z);
+						int k=z+1;
+						for(int j=z+1;j<strlen(s);j++)
+						{
+					//	while(s[j]!=32)
+							{
+								if((s[j]>=65&&s[j]<=90)||(s[j]>=97&&s[j]<=122))
+								{
+									c=1;
+								}
+								j++;
+								//printf("<<%d<<\n",j);
+								if(s[j]==32||s[j]==10||s[j]==0)
+								{
+									z=j;
+									break;
+								}
+							}
+							break;
+						}	
+						if(s[k]==48)
+						{
+							printf("N\n");
+						//	break;
+						}
+						else if(c==0)
+							printf("N\n");
+						else
+							printf("V\n");
+
+
+					}
+				}
+				else
+				{
+					if(z==strlen(s))
+					{
+						printf("M\n");
+					}
+					else
+					{
+						int k=z+1;
+						for(int j=z+1;j<strlen(s);j++)
+						{
+					//	while(s[j]!=32)
+							{
+								if((s[j]>=65&&s[j]<=90)||(s[j]>=97&&s[j]<=122))
+								{
+									c=1;
+								}
+								j++;
+								//printf("<<%d<<\n",j);
+								if(s[j]==32||s[j]==10||s[j]==0)
+								{
+									z=j;
+									break;
+								}
+							}
+							break;
+						}
+						if(s[k]==48)
+						{
+							printf("N\n");
+							//break;
+						}
+						else if(c==0)
+							printf("V\n");
+						else
+							printf("N\n");	
+					}
+
+
+
+
+				}
+
+			}
+			else
+			{
+				int k=z+1;
+				for(int j=z+1;j<strlen(s);j++)
+				{
+					while(s[j]!=32)
+					{
+						if((s[j]>=65&&s[j]<=90)||(s[j]>=97&&s[j]<=122))
+						{
+							b=1;
+						}
+						j++;
+						if(s[j]==32||s[j]==10||s[j]==0)
+						{
+							z=j;
+							break;
+						}
+					}
+					break;
+				}
+				if(s[k]==48)
+				{
+					printf("N\n");
+					//break;
+				}
+			  else if(b==0)
+				{
+					if(z==strlen(s))
+					{
+						printf("M\n");
+					}
+					else
+					{
+						//printf("<<<&d<<\n",z);
+						int ww=z+1;
+						//printf("..%d..\n",ww);
+
+						for(int j=z+1;j<strlen(s);j++)
+						{
+					//	while(s[j]!=32)
+							{
+								if((s[j]>=65&&s[j]<=90)||(s[j]>=97&&s[j]<=122))
+								{
+									c=1;
+								}
+								j++;
+								if(s[j]==32||s[j]==10||s[j]==0)
+								{
+									z=j;
+									break;
+								}
+							}
+							break;
+						}	
+						if(s[ww]=='0')
+						{
+							printf("N\n");
+						//	break;
+						}
+						else if(c==0)
+							printf("V\n");
+						else
+							printf("N\n");
+					}
+				}
+				else
+				{
+					printf("N\n");
+				}
+			
+			}
+			
+		}
+		i++;
+	}
+}
